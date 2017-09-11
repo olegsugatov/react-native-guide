@@ -23,7 +23,7 @@ export default class rnGuide extends Component {
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
-      </View>
+      </View> 
     );
   }
 }
