@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StackNavigator } from 'react-navigation';
 import {
   AppRegistry,
   StyleSheet,
@@ -7,6 +8,11 @@ import {
   View,
   Image
 } from 'react-native';
+
+const BasicApp = StackNavigator({
+  Main: {screen: MainScreen}
+  // Profile: {screen: ProfileScreen},
+});
 
 export default class rnGuide extends Component {
   render() {
