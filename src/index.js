@@ -10,10 +10,12 @@ import {
 
 import { DrawerNavigator } from 'react-navigation';
 import SecondScreen from './screens/SecondScreen';
-// import App from './screens/App';
+import Typography from './screens/Typography';
 
-const BasicApp = DrawerNavigator({
-  Profile: {screen: SecondScreen}
+const Routing = DrawerNavigator ({
+  // Login: { screen: Login},
+  Typography: { screen: Typography},
+  SecondScreen: { screen: SecondScreen}
 });
 
 export default class App extends Component {
@@ -24,12 +26,9 @@ export default class App extends Component {
 
     return (
       <Button
-        title="Go to Jane's profile"
-        onPress={() =>
-          navigate('Profile', { name: 'Jane' })
-        }
+        onPress={() => navigate('DrawerOpen')}
+        title="Go to Second Screen"
       />
-
     );
   }
 }
@@ -40,6 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    paddingTop: 100,
   },
   welcome: {
     fontSize: 20,
@@ -79,12 +79,6 @@ const styles = StyleSheet.create({
   //   flex:3,
   //   backgroundColor: 'steelblue'
   // }
-});
-
-const Routing = DrawerNavigator ({
-  // Login: { screen: Login},
-  // Welcome: { screen: Welcome},
-  SecondScreen: { screen: SecondScreen}
 });
 
 AppRegistry.registerComponent('rnGuide', () => Routing);

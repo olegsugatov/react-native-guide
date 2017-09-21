@@ -23,10 +23,9 @@ class SecondScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Button
-          onPress={() => navigate('SecondScreen')}
-          title="Go to Second Screen"
-         />
-
+          onPress={() => navigate('DrawerOpen')}
+          title="Navigation"
+        />
         {/* Image */}
         <View>
           <Image source={pic} style={{width: 193, height: 110}}/>
@@ -88,10 +87,10 @@ class Greeting extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    paddingTop: 30
   },
   welcome: {
     fontSize: 20,
@@ -136,70 +135,3 @@ const styles = StyleSheet.create({
 
 
 export default SecondScreen;
-
-// import React, { Component } from 'react';
-
-// import {
-//   Image,
-//   Button,
-//   StyleSheet,
-//   Text,
-//   View
-// } from 'react-native';
-
-// // import App from './App';
-
-// class SecondScreen extends Component {
-
-//   static navigationOptions = {
-//     title: 'Second Screen'
-//   };
-
-//   render() {
-    
-//     // const { navigate } = this.props.navigation;
-
-//     return (
-//       <View style={styles.container}>
-//          <Text style={styles.welcome}>
-//            Second Screen!
-//          </Text>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF'
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10
-//   }
-// });
-
-// export default SecondScreen;
-
-
-
-// class MainScreen extends React.Component {
-//   static navigationOptions = {
-//     title: 'Welcome',
-//   };
-//   render() {
-//     const { navigate } = this.props.navigation;
-//     return (
-//       <Button
-//         title="Go to Jane's profile"
-//         onPress={() =>
-//           navigate('Profile', { name: 'Jane' })
-//         }
-//       />
-//     );
-//   }
-// }
