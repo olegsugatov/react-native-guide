@@ -13,13 +13,15 @@ import Typography from './screens/Typography';
 import Images from './screens/Images';
 import Props from './screens/Props';
 import Sizes from './screens/Sizes';
+import Scroll from './screens/Scroll';
 
 
 const Routing = DrawerNavigator ({
   Typography: { screen: Typography},
   Images: { screen: Images},
   Props: { screen: Props},
-  Sizes: { screen: Sizes}
+  Sizes: { screen: Sizes},
+  Scroll: { screen: Scroll},
 });
 
 export default class App extends Component {
