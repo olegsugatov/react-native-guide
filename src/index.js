@@ -9,13 +9,17 @@ import {
 } from 'react-native';
 
 import { DrawerNavigator } from 'react-navigation';
-import SecondScreen from './screens/SecondScreen';
 import Typography from './screens/Typography';
+import Images from './screens/Images';
+import Props from './screens/Props';
+import Sizes from './screens/Sizes';
+
 
 const Routing = DrawerNavigator ({
-  // Login: { screen: Login},
   Typography: { screen: Typography},
-  SecondScreen: { screen: SecondScreen}
+  Images: { screen: Images},
+  Props: { screen: Props},
+  Sizes: { screen: Sizes}
 });
 
 export default class App extends Component {
