@@ -53,13 +53,17 @@ const styles = StyleSheet.create({
     paddingTop: 30
   },
   welcome: {
+    fontFamily: 'GothamProBlack',
+    // fontFamily: 'Zapfino',
     // fontFamily: 'Gotham',
+
     // lineHeight: 1,
     fontSize: 90,
     margin: 10,
     fontWeight: '900',
   },
   instructions: {
+    // fontFamily: 'Inconsalata-Regular',
     color: '#333333',
     marginBottom: 5,
     paddingLeft: 30,
