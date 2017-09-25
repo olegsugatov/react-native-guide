@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
-import {
-  StyleSheet,
-  Text,
-  ScrollView,
-  StatusBar
-} from 'react-native';
+import Menu from '../components/Menu';
+import Bar from '../components/Bar';
 
 class Scroll extends React.Component {
     
     render() {
     
-    // const { navigate } = this.props.navigation;
+    const { navigate } = this.props.navigation;
 
     return (
-       <ScrollView style={styles.container}>
+      <View>
+        <Bar />
+        <Menu navigation={{navigate}}/>
+
+        <ScrollView style={styles.container}>
           <Text style={styles.welcome}>Welcome to Typography!</Text>
           <Text style={styles.instructions}>
           Mustache umami selfies, lo-fi keffiyeh kitsch portland. 
@@ -45,33 +46,39 @@ class Scroll extends React.Component {
           retro snackwave vice stumptown fixie.
           </Text>
         </ScrollView>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 5,
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingTop: 30
+    paddingTop: 30,
+    marginBottom: 40
   },
   welcome: {
     // fontFamily: 'GothamProBlack',
     // fontFamily: 'Zapfino',
     // fontFamily: 'Gotham',
+    // fontFamily: 'Inconsalata-Regular',
 
+    // justifyContent: 'center',
+    alignItems: 'center',
     lineHeight: 90,
     fontSize: 90,
-    margin: 10,
-    fontWeight: '900',
+    marginTop: 10,
+    marginLeft: 30,
+    marginRight: 30,
+    marginBottom: 40,
+    fontWeight: '900'
   },
   instructions: {
-    // fontFamily: 'Inconsalata-Regular',
     // color: '#333333',
     lineHeight: 25,
+    paddingLeft: 40,
+    paddingRight: 40,
+    marginBottom: 100
   }
-  // backgroundColor: '#F5FCFF',
 });
 
 export default Scroll;

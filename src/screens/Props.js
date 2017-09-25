@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button
-} from 'react-native';
+import Menu from '../components/Menu';
+import Bar from '../components/Bar';
 
 class Props extends React.Component {
   render() {
@@ -14,14 +10,12 @@ class Props extends React.Component {
     const { navigate } = this.props.navigation;
     
     return (
-      <View style={styles.container}>
-        <Button
-          onPress={() => navigate('DrawerOpen')}
-          title="Navigation"
-        />
+      <View >
 
+        <Bar />
+        <Menu navigation={{navigate}}/>
         {/* Props in Action */}
-        <View>
+        <View style={styles.container}>
           <Greeting name='Rexxar' />
           <Greeting name='Jaina' />
           <Greeting name='Valeera' />
@@ -43,13 +37,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: '#F5FCFF',
     paddingTop: 30
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
   },
   instructions: {
     textAlign: 'center',

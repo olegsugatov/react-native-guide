@@ -8,8 +8,8 @@ import {
   StatusBar
 } from 'react-native';
 
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Menu from '../components/Menu';
+import Bar from '../components/Bar';
 
 class Typography extends React.Component {
     
@@ -18,14 +18,8 @@ class Typography extends React.Component {
     const { navigate } = this.props.navigation;
 
     return (
-
       <View>
-          {/* 
-          <StatusBar barStyle="light-content" />
-          <MaterialIcon style={styles.menu}
-            name="menu" onPress={() => navigate('DrawerOpen')}>
-          </MaterialIcon>
-          <Menu {...this.props}/>*/}
+          <Bar />
           <Menu navigation={{navigate}}/>
 
           <View style={styles.container}>

@@ -31,13 +31,8 @@ const Routing = DrawerNavigator ({
 export default class App extends Component {
 
   render() {
-    
-    // const { navigate } = this.props.navigation;
-
     return ( 
-      <View>
-        <Menu></Menu>
-      </View>
+      <View></View>
     );
   }
 }

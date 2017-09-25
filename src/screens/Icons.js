@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button,
-  StatusBar
-} from 'react-native';
+import Menu from '../components/Menu';
+import Bar from '../components/Bar';
 
+// icon sets
+// https://oblador.github.io/react-native-vector-icons/
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
@@ -20,11 +17,8 @@ class Icons extends React.Component {
     
     return (
       <View>
-          <StatusBar barStyle="light-content" />
-          <MaterialIcon style={styles.menu}
-            name="menu" onPress={() => navigate('DrawerOpen')}>
-          </MaterialIcon>
-
+          <Bar />
+          <Menu navigation={{navigate}}/>
           <Icon.Button style={styles.button} name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
             Login with Facebook
           </Icon.Button>
@@ -32,8 +26,6 @@ class Icons extends React.Component {
     );
   }
 }
-
-// https://oblador.github.io/react-native-vector-icons/
 
 const styles = StyleSheet.create({
   container: {
@@ -55,7 +47,5 @@ const styles = StyleSheet.create({
     fontSize: 27,
   },
 });
-
-
 
 export default Icons;

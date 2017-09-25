@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button,
-  StatusBar
-} from 'react-native';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import Menu from '../components/Menu';
+import Bar from '../components/Bar';
 
 class Images extends React.Component {
-  
+
   render() {
 
     let pic = {
@@ -22,16 +16,12 @@ class Images extends React.Component {
     
     return (
       <View>
-          <StatusBar barStyle="light-content" />
-          <MaterialIcon style={styles.menu}
-            name="menu" onPress={() => navigate('DrawerOpen')}>
-          </MaterialIcon>
-      <View style={styles.container}>
-        {/* Image */}
-        <View>
+        <Bar />
+        <Menu navigation={{navigate}}/>
+        <View style={styles.container}>
+          {/* Image */}
           <Image source={pic} style={styles.image}/>
         </View>
-      </View>
       </View>
     );
   }
