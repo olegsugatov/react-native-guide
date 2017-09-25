@@ -14,6 +14,9 @@ import Images from './screens/Images';
 import Props from './screens/Props';
 import Sizes from './screens/Sizes';
 import Scroll from './screens/Scroll';
+import Icons from './screens/Icons';
+
+import Menu from './components/Menu';
 
 
 const Routing = DrawerNavigator ({
@@ -22,19 +25,19 @@ const Routing = DrawerNavigator ({
   Props: { screen: Props},
   Sizes: { screen: Sizes},
   Scroll: { screen: Scroll},
+  Icons: { screen: Icons},
 });
 
 export default class App extends Component {
 
   render() {
     
-    const { navigate } = this.props.navigation;
+    // const { navigate } = this.props.navigation;
 
-    return (
-      <Button
-        onPress={() => navigate('DrawerOpen')}
-        title="Go to Second Screen"
-      />
+    return ( 
+      <View>
+        <Menu></Menu>
+      </View>
     );
   }
 }

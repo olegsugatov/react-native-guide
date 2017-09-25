@@ -9,9 +9,7 @@ import {
 } from 'react-native';
 
 class Sizes extends React.Component {
-  static navigationOptions = {
-    title: 'Sizes',
-  };
+
   render() {
     
     const { navigate } = this.props.navigation;

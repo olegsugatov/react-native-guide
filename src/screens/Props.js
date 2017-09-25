@@ -9,9 +9,6 @@ import {
 } from 'react-native';
 
 class Props extends React.Component {
-  static navigationOptions = {
-    title: 'Props',
-  };
   render() {
     
     const { navigate } = this.props.navigation;

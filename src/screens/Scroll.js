@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  ScrollView
+  ScrollView,
+  StatusBar
 } from 'react-native';
 
 class Scroll extends React.Component {
     
     render() {
     
-    const { navigate } = this.props.navigation;
+    // const { navigate } = this.props.navigation;
 
     return (
-       <ScrollView>
+       <ScrollView style={styles.container}>
           <Text style={styles.welcome}>Welcome to Typography!</Text>
           <Text style={styles.instructions}>
           Mustache umami selfies, lo-fi keffiyeh kitsch portland. 
@@ -50,24 +51,25 @@ class Scroll extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    marginBottom: 5,
+    paddingLeft: 30,
+    paddingRight: 30,
     paddingTop: 30
   },
   welcome: {
-    fontFamily: 'GothamProBlack',
+    // fontFamily: 'GothamProBlack',
     // fontFamily: 'Zapfino',
     // fontFamily: 'Gotham',
 
-    // lineHeight: 1,
+    lineHeight: 90,
     fontSize: 90,
     margin: 10,
     fontWeight: '900',
   },
   instructions: {
     // fontFamily: 'Inconsalata-Regular',
-    color: '#333333',
-    marginBottom: 5,
-    paddingLeft: 30,
-    paddingRight: 30
+    // color: '#333333',
+    lineHeight: 25,
   }
   // backgroundColor: '#F5FCFF',
 });

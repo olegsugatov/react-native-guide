@@ -8,16 +8,14 @@ import {
   Button,
   StatusBar
 } from 'react-native';
+
+import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
-class Images extends React.Component {
+class Icons extends React.Component {
   
   render() {
 
-    let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
-    
     const { navigate } = this.props.navigation;
     
     return (
@@ -26,16 +24,16 @@ class Images extends React.Component {
           <MaterialIcon style={styles.menu}
             name="menu" onPress={() => navigate('DrawerOpen')}>
           </MaterialIcon>
-      <View style={styles.container}>
-        {/* Image */}
-        <View>
-          <Image source={pic} style={styles.image}/>
-        </View>
-      </View>
+
+          <Icon.Button style={styles.button} name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
+            Login with Facebook
+          </Icon.Button>
       </View>
     );
   }
 }
+
+// https://oblador.github.io/react-native-vector-icons/
 
 const styles = StyleSheet.create({
   container: {
@@ -47,7 +45,10 @@ const styles = StyleSheet.create({
     width: 280,
     height: 180,
     borderRadius: 6
-  }, 
+  },
+  button: {
+    // borderRadius: 0
+  },
   menu: {
     marginTop: 25,
     marginLeft: 25,
@@ -57,4 +58,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Images;
+export default Icons;
