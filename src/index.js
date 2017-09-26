@@ -1,12 +1,5 @@
-import React, { Component } from 'react';
-
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Button
-} from 'react-native';
+import React, { Component } from 'react'; 
+import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native';
 
 import { DrawerNavigator } from 'react-navigation';
 import Typography from './screens/Typography';
@@ -15,9 +8,7 @@ import Props from './screens/Props';
 import Sizes from './screens/Sizes';
 import Scroll from './screens/Scroll';
 import Icons from './screens/Icons';
-
-import Menu from './components/Menu';
-
+import Components from './screens/Components';
 
 const Routing = DrawerNavigator ({
   Typography: { screen: Typography},
@@ -26,6 +17,7 @@ const Routing = DrawerNavigator ({
   Sizes: { screen: Sizes},
   Scroll: { screen: Scroll},
   Icons: { screen: Icons},
+  Components: { screen: Components }
 });
 
 export default class App extends Component {
@@ -70,19 +62,6 @@ const styles = StyleSheet.create({
     height: 10,
     backgroundColor: 'steelblue'
   },
-
-  // lilboxf: {
-  //   flex: 1,
-  //   backgroundColor: 'skyblue'
-  // },
-  // medboxf: {
-  //   flex: 2,
-  //   backgroundColor: 'skyblue'
-  // },
-  // bigboxf: {
-  //   flex:3,
-  //   backgroundColor: 'steelblue'
-  // }
 });
 
 AppRegistry.registerComponent('rnGuide', () => Routing);
