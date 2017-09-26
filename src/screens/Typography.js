@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  StatusBar
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import Menu from '../components/Menu';
 import Bar from '../components/Bar';
@@ -38,20 +31,11 @@ class Typography extends React.Component {
   }
 }
 
-// menu
-// dehaze
-// drag-handle
-
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 30
-  },
-  menu: {
-    marginTop: 25,
-    marginLeft: 25,
-    fontSize: 27,
   },
   welcome: {
     fontSize: 20,
@@ -63,13 +47,46 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   }
-  // backgroundColor: '#F5FCFF',
+
 });
 
 export default Typography;
 
 
-/* Fonts Available in React Native out of the box
+
+/*
+Typorraphy Polyfills
+
+fontFamily: 16
+fontSize: 21
+fontWeight: 'normal', 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900'
+fontStyle: 'normal', 'italic'
+lineHeight: 1.5
+textAlign: 'auto', 'left', 'right', 'center', 'justify'(iOS)
+textDecorationLine: 'none', 'underline', 'line-through', 'underline line-through'
+textShadowColor: color
+textShadowOffset {width: number, height: number}
+textShadowRadius: 3  
++ color: '#f0f' (#rgb), '#ff00ff' (#rrggbb), 'rgb(255, 0, 255)', 'rgba(255, 255, 255, 1.0)', '#f0ff' (#rgba), '#ff00ff00' (#rrggbbaa)
+
+  textAlignVertical
+  textDecorationColor
+  textDecorationStyle
+
+
+- iOS
+iosfontVariant ['small-caps', 'oldstyle-nums', 'lining-nums', 'tabular-nums', 'proportional-nums']
+iosletterSpacing: 2
+iostextDecorationColor: color
+iostextDecorationStyle: 'solid', 'double', 'dotted', 'dashed'
+ioswritingDirection: 'auto', 'ltr', 'rtl'
+
+- Android
+androidincludeFontPadding bool
+androidtextAlignVertical: 'auto', 'top', 'bottom', 'center'
+  
+
+Fonts Available in React Native out of the box
 https://github.com/react-native-training/react-native-fonts/blob/master/README.md
 Android
 normal

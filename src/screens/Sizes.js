@@ -53,5 +53,6 @@ const styles = StyleSheet.create({
   },
 });
 
+  // backgroundColor: "#FF5A62",
 
 export default Sizes;

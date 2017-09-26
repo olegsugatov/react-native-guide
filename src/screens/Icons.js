@@ -19,33 +19,48 @@ class Icons extends React.Component {
       <View>
           <Bar />
           <Menu navigation={{navigate}}/>
-          <Icon.Button style={styles.button} name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
+        
+        <View style={styles.content}>
+          <Icon.Button style={styles.button} 
+            name="facebook" onPress={this.loginWithFacebook}>
             Login with Facebook
           </Icon.Button>
+          
+          <View style={styles.fbwrapper}>
+          <Icon style={styles.fbutton} 
+            name="facebook" onPress={this.loginWithFacebook}>
+          </Icon>
+          </View>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 30
-  },
-  image: {
-    width: 280,
-    height: 180,
-    borderRadius: 6
+  content: {
+    marginHorizontal: 30
   },
   button: {
-    // borderRadius: 0
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 30,
+    paddingVertical: 25
   },
-  menu: {
-    marginTop: 25,
-    marginLeft: 25,
-    fontSize: 27,
+  fbwrapper: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center', 
+    alignItems: 'center',
+    backgroundColor: '#3b5998',     
+    marginTop: 50
   },
+  fbutton: {
+    fontSize: 28,
+    paddingHorizontal: 25,
+    paddingVertical: 20,
+    color: 'white',
+  }
 });
 
 export default Icons;
