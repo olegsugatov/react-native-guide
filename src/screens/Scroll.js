@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, 
+         ScrollView } from 'react-native';
 
 import Menu from '../components/Menu';
 import Bar from '../components/Bar';

@@ -8,6 +8,7 @@ import Props from './screens/Props';
 import Sizes from './screens/Sizes';
 import Scroll from './screens/Scroll';
 import Icons from './screens/Icons';
+import Buttons from './screens/Buttons';
 import Components from './screens/Components';
 
 const Routing = DrawerNavigator ({
@@ -17,6 +18,7 @@ const Routing = DrawerNavigator ({
   Sizes: { screen: Sizes},
   Scroll: { screen: Scroll},
   Icons: { screen: Icons},
+  Buttons: {screen: Buttons},
   Components: { screen: Components }
 });
 

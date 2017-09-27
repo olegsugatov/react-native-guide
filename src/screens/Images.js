@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, 
+         Image } from 'react-native';
 
 import Menu from '../components/Menu';
 import Bar from '../components/Bar';
@@ -37,12 +38,7 @@ const styles = StyleSheet.create({
     width: 280,
     height: 180,
     borderRadius: 6
-  }, 
-  menu: {
-    marginTop: 25,
-    marginLeft: 25,
-    fontSize: 27,
-  },
+  }
 });
 
 
